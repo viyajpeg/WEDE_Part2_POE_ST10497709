@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desify ZA - Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-[#C62828] text-white py-6 shadow-lg rounded-b-3xl">
+        <div class="container mx-auto px-6 flex justify-between items-center relative">
+            <h1 class="text-3xl font-marhey">Desify ZA</h1>
+            
+            <button id="menu-button" class="lg:hidden text-2xl focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+            
+            <nav id="mobile-menu" class="hidden lg:flex absolute top-full left-0 w-full bg-[#C62828] lg:static lg:w-auto lg:bg-transparent shadow-lg lg:shadow-none z-10">
+                <ul class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-6 p-4 lg:p-0 text-center">
+                    <li><a href="index.html" class="block py-2 hover:text-[#FFD700] transition-colors">Home</a></li>
+                    <li><a href="menus.html" class="block py-2 hover:text-[#FFD700] transition-colors">Menus</a></li>
+                    <li><a href="classes.html" class="block py-2 hover:text-[#FFD700] transition-colors">Classes</a></li>
+                    <li><a href="gallery.html" class="block py-2 hover:text-[#FFD700] transition-colors">Gallery</a></li>
+                    <li><a href="contact.html" class="block py-2 hover:text-[#FFD700] transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <section id="gallery" class="mb-16">
+            <h2 class="text-4xl font-marhey text-center text-[#C62828] mb-8">Event Gallery</h2>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="rounded-3xl overflow-hidden shadow-xl hover:scale-105 transition-transform">
+                    <img src="https://placehold.co/600x400/FFB74D/ffffff?text=Catered+Event+Photo+1" alt="Photo from a catered event" class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-3xl overflow-hidden shadow-xl hover:scale-105 transition-transform">
+                    <img src="https://placehold.co/600x400/FFD700/ffffff?text=Cooking+Class+Photo+2" alt="Photo from a cooking class" class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-3xl overflow-hidden shadow-xl hover:scale-105 transition-transform">
+                    <img src="https://placehold.co/600x400/C62828/ffffff?text=Delicious+Food+Photo+3" alt="Close-up of a delicious dish" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-4xl font-marhey text-center text-[#C62828] mb-8">What Our Clients Say</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-3xl p-6 shadow-xl border-t-4 border-[#FFD700] hover:scale-105 transition-transform">
+                    <p class="italic text-gray-700">"The food was absolutely incredible! Everyone at our event was raving about the authentic flavors. Highly recommend Desify ZA!"</p>
+                    <p class="mt-4 font-bold text-right">- Jane Doe</p>
+                </div>
+                <div class="bg-white rounded-3xl p-6 shadow-xl border-t-4 border-[#FFD700] hover:scale-105 transition-transform">
+                    <p class="italic text-gray-700">"The cooking class was so much fun and very informative. I learned to make my favorite curry and can't wait to try it at home!"</p>
+                    <p class="mt-4 font-bold text-right">- John Smith</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#616161] text-white py-6 rounded-t-3xl">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Desify ZA. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('menu-button').onclick = function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex', 'flex-col'); 
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex', 'flex-col');
+            }
+        };
+    </script>
+
+</body>
+</html>

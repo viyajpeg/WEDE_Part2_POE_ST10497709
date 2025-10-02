@@ -1,0 +1,30 @@
+/* ---------------------------------------------------- */
+/* CSS Styling for Desktop: Contains Default Style Code */
+/* ---------------------------------------------------- */
+
+/* CSS Reset (Ensuring clean styling start) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Lexend:wght@100..900&display=swap');
+
+/* Default Font Family for Body (Requirement 2.2) */
+body {
+    font-family: 'Lexend', sans-serif;
+}
+
+/* Custom Font Class for Headings (Requirement 2.3) */
+.font-marhey {
+    font-family: 'Marhey', serif;
+}
+
+/* Utility to show the mobile menu */
+.mobile-menu-open {
+    /* Tailwind will handle the actual toggling */
+    display: flex;
+    flex-direction: column;
+}
